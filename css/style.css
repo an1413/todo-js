@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  background-image: url();
+  margin: 0;
+  padding: 0;
+}
+
+.disabled {
+  display: none;
+}
+
+#wrapper {
+  height: 100vh;
+}
