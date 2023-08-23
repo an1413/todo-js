@@ -15,16 +15,17 @@ function handleInputVaule(e) {
 
 function loginCheck(myAccount) {
   if(localStorage.getItem(myAccount)) {
+  loginForm.classList.add("disabled")
   const yourname = loginInput.value;
   // 유저정보가 있다면
   console.log("ok");
-  loginForm.className = "disabled"
   yourName.innerText = localStorage.getItem("myAccount", yourname);
 } else {
   // 유저정보가 없다면
+  loginForm.classList.remove("disabled")
   console.log("no");
 }
 }
 
-loginForm.addEventListener("submit", handleInputVaule);
 loginCheck("myAccount")
+loginForm.addEventListener("submit", handleInputVaule);
