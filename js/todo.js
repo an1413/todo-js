@@ -15,8 +15,13 @@ function savedTodoList() {
 
 function deleteToDo(e) {
   const li = e.target.parentElement;
-  savedList = savedList.filter((toDo) => toDo.id !== parseInt(li.id));
+  console.log(savedList);
+  console.log(li);
+  savedList = savedList.filter((toDo) => {return toDo.id !== parseInt(li.id)});
+  console.log(savedList);
   savedTodoList();
+
+
   li.remove();
 }
 
@@ -24,6 +29,7 @@ function createTodoList(todo) {
   const li = document.createElement("li");
   const text = document.createElement("span");
   text.innerText = todo.text;
+  li.id = todo.id;
   const deleteBtn = document.createElement("button");
   deleteBtn.innerText = "X";
   deleteBtn.addEventListener("click", deleteToDo)
