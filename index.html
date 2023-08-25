@@ -6,36 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todoApp</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
   </head>
 
   <body>
     <div id="wrapper">
-      <form id="login-form" class="">
-        <input id="login-input" type="text" placeholder="닉네임을 입력해주세요." required>
-        <button id="login-btn">입력</button>
-      </form>
-      <div id="welcome">
-        <span></span>
+      <div class="main-box">
+        <form id="login-form" class="">
+          <h2>당신의 이름을 입력해주세요</h2>
+          <input id="login-input" type="text" placeholder="닉네임 입력" required>
+          <button id="login-btn"><span>입력</span></button>
+        </form>
+        <div id="welcome" class="disabled">
+          <span></span>님 환영합니다.
+        </div>
       </div>
 
       <div id="day-time">
-        <span id="day"></span>
-        <span id="time"></span>
+        <span id="day"></span>말씀 묵상
+        <!-- <span id="time"></span> -->
       </div>
 
 
-      <form id="todo-form">
-        <input id="todo-input" type="text" placeholder="입력해라~~~~!">
-        <button type="todo-btn">입력</button>
-      </form>
-      <ul id="todo-list">
+      <footer>
+        <div id="quote">
+          <span>1</span>
+          <br />
+          <span></span>
+        </div>
+      </footer>
 
-      </ul>
+      <div class="todo-container">
+        <h3>오늘의 목표</h3>
+        <form id="todo-form">
+          <input id="todo-input" type="text" placeholder="입력해라~~~~!">
+          <button type="todo-btn">입력</button>
+        </form>
+        <ul id="todo-list">
 
-      <div id="quote">
-        <span>1</span>
-        <span></span>
+        </ul>
       </div>
 
       <div id="weather">
