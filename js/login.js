@@ -16,6 +16,8 @@ function handleInputVaule(e) {
 function loginCheck(myAccount) {
   if(localStorage.getItem(myAccount)) {
   loginForm.classList.add("disabled")
+  welcome.classList.remove("disabled")
+
   const yourname = loginInput.value;
   // 유저정보가 있다면
   console.log("ok");
