@@ -71,6 +71,10 @@ footer {
   margin: 0 auto;
 }
 
+#todo-input {
+  border-bottom: 2px solid coral;
+}
+
 #todo-list {
   display: flex;
   flex-direction: column;
