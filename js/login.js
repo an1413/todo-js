@@ -21,12 +21,10 @@ function loginCheck(myAccount) {
   welcome.classList.remove("disabled")
   dayTime.classList.remove("disabled")
   todoContainer.classList.remove("disabled")
-
-
   const yourname = loginInput.value;
   // 유저정보가 있다면
   console.log("ok");
-  yourName.innerText = localStorage.getItem("myAccount", yourname);
+  yourName.innerText = localStorage.getItem(myAccount, yourname);
 } else {
   // 유저정보가 없다면
   loginForm.classList.remove("disabled")
@@ -34,5 +32,9 @@ function loginCheck(myAccount) {
 }
 }
 
-loginCheck("myAccount")
+// loginCheck("myAccount")
 loginForm.addEventListener("submit", handleInputVaule);
+
+document.addEventListener("DOMContentLoaded", () => {
+  loginCheck("myAccount");
+});
